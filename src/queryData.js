@@ -1,4 +1,4 @@
-const query = () => ({
+const query = geneId => ({
 	name: 'GeneExpress',
 	title:
 		'Gene --> Gene Expression  (Tissue, Disease; Array Express, E-MTAB-62)',
@@ -27,7 +27,7 @@ const query = () => ({
 		{
 			path: 'Gene',
 			op: 'LOOKUP',
-			value: 'KRAS',
+			value: geneId,
 			extraValue: 'H. sapiens',
 			code: 'D',
 			editable: true,
