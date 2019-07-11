@@ -3,7 +3,7 @@ const queryExpData = require('../src/queryData').default;
 
 describe('query', () => {
 	const mockData = {
-		gene: 'KRAG',
+		gene: 1018204,
 		serviceUrl: 'http://www.humanmine.org/human'
 	};
 	test('should return a promise that resolves with correct result json', () => {
@@ -24,7 +24,7 @@ describe('query', () => {
 
 	test('should throw error when data corresponding to organism is not found', () => {
 		const dataWithInvalidGeneId = Object.assign({}, mockData, {
-			gene: 'KAG' // some wrong gene
+			gene: 100002 // some wrong gene
 		});
 
 		const queryRes = queryExpData(
