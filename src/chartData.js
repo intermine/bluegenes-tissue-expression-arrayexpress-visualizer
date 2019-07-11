@@ -21,15 +21,13 @@ function getChartData(results) {
 		else color = LOW_CONFIDENCE;
 		chartData.colors.push(color);
 
-		// // get hover text for this tissue bar
-		// let regulationText = 'Same as Whole Fly';
-		// if (result.affyCall === 'UP') regulationText = 'Up Regulated';
-		// else if (result.affyCall === 'DOWN') regulationText = 'Down Regulated';
-		// else regulationText = '';
-		// regulationText = `${regulationText}: (signal: ${
-		// 	result.mRNASignal
-		// }, enrichment: ${result.enrichment})`;
-		// chartData.hoverTexts.push(regulationText);
+		// get hover text for this tissue bar
+		let regulationText = 'Low Confidence';
+		if (result.affyCall === 'UP') regulationText = 'Up Regulated';
+		else if (result.affyCall === 'DOWN') regulationText = 'Down Regulated';
+		else regulationText = '';
+		regulationText = `${result.condition} ${regulationText}: (t-statistic: ${result.tStatistic}, p-value: ${result.pValue})`;
+		chartData.hoverTexts.push(regulationText);
 	});
 
 	return chartData;

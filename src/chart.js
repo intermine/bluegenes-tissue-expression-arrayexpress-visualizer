@@ -36,7 +36,7 @@ class ExpressionChart extends React.Component {
 								{
 									text: 'Down Regulated',
 									fillStyle: '#344DB5',
-									strokeStyle: '#344DB5',
+									strokeStyle: '#000',
 									lineWidth: 1,
 									hidden: false,
 									index: 0
@@ -44,7 +44,7 @@ class ExpressionChart extends React.Component {
 								{
 									text: 'Low Confidence',
 									fillStyle: '#fff',
-									strokeStyle: '#fff',
+									strokeStyle: '#000',
 									lineWidth: 1,
 									hidden: false,
 									index: 1
@@ -52,7 +52,7 @@ class ExpressionChart extends React.Component {
 								{
 									text: 'Up Regulated',
 									fillStyle: '#AD3E61',
-									strokeStyle: '#AD3E61',
+									strokeStyle: '#000',
 									lineWidth: 1,
 									hidden: false,
 									index: 1
