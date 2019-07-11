@@ -55,10 +55,13 @@ function queryData(geneId, serviceUrl, imjsClient = imjs) {
 	return new Promise((resolve, reject) => {
 		// eslint-disable-next-line
 		const service = new imjsClient.Service({ root: serviceUrl });
-		service.records(query(geneId)).then(data => {
-			if (data && data.length) resolve(data[0]);
-			else reject('No data found!');
-		});
+		service
+			.records(query(geneId))
+			.then(data => {
+				if (data && data.length) resolve(data[0]);
+				else reject('No data found!');
+			})
+			.catch(() => reject('No data found!'));
 	});
 }
 

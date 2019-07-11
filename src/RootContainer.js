@@ -9,7 +9,8 @@ class RootContainer extends React.Component {
 		super(props);
 		this.state = {
 			chartData: null,
-			loading: true
+			loading: true,
+			error: false
 		};
 	}
 
@@ -19,13 +20,15 @@ class RootContainer extends React.Component {
 			serviceUrl
 		} = this.props;
 
-		queryData(value, serviceUrl).then(res => {
-			const { atlasExpression } = res;
-			this.setState({
-				chartData: getChartData(atlasExpression),
-				loading: false
-			});
-		});
+		queryData(value, serviceUrl)
+			.then(res => {
+				const { atlasExpression } = res;
+				this.setState({
+					chartData: getChartData(atlasExpression),
+					loading: false
+				});
+			})
+			.catch(error => this.setState({ error, loading: false }));
 	}
 
 	render() {
@@ -38,8 +41,10 @@ class RootContainer extends React.Component {
 
 		return (
 			<div className="rootContainer">
-				{this.state.chartData && (
+				{this.state.chartData && !this.state.error ? (
 					<ExpressionChart chartData={this.state.chartData} />
+				) : (
+					<span className="error">{this.state.error}</span>
 				)}
 			</div>
 		);
