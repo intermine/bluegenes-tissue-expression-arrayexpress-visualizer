@@ -4,12 +4,14 @@ function getChartData(results) {
 	const chartData = {
 		data: [],
 		colors: [],
-		hoverTexts: []
+		hoverTexts: [],
+		tissueNames: []
 	};
 
 	results.forEach(result => {
 		// we need tStatistic value to be shown
 		chartData.data.push(result.tStatistic);
+		chartData.tissueNames.push(result.condition);
 
 		// get color for this value
 		let color = '';
