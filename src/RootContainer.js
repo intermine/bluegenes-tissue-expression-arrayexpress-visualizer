@@ -17,8 +17,12 @@ class RootContainer extends React.Component {
 	componentDidMount() {
 		const {
 			entity: { value },
-			serviceUrl
+			serviceUrl,
+			testing
 		} = this.props;
+
+		// don't calculate anything if in testing phase
+		if (testing) return;
 
 		queryData(value, serviceUrl)
 			.then(res => {
