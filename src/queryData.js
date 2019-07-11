@@ -25,7 +25,7 @@ const query = geneId => ({
 	],
 	where: [
 		{
-			path: 'symbol',
+			path: 'Gene.id',
 			op: '=',
 			value: geneId,
 			extraValue: 'H. sapiens',
