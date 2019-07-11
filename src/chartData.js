@@ -23,10 +23,10 @@ function getChartData(results) {
 
 		// get hover text for this tissue bar
 		let regulationText = 'Low Confidence';
-		if (result.affyCall === 'UP') regulationText = 'Up Regulated';
-		else if (result.affyCall === 'DOWN') regulationText = 'Down Regulated';
+		if (result.expression === 'UP') regulationText = 'Up Regulated';
+		else if (result.expression === 'DOWN') regulationText = 'Down Regulated';
 		else regulationText = '';
-		regulationText = `${result.condition} ${regulationText}: (t-statistic: ${result.tStatistic}, p-value: ${result.pValue})`;
+		regulationText = `${regulationText}: (t-statistic: ${result.tStatistic}, p-value: ${result.pValue})`;
 		chartData.hoverTexts.push(regulationText);
 	});
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Chart from 'chart.js';
+import { DOWN_EXP_COLOR, UP_EXP_COLOR } from './colors';
 
 class ExpressionChart extends React.Component {
 	componentDidMount() {
@@ -35,7 +36,7 @@ class ExpressionChart extends React.Component {
 							return [
 								{
 									text: 'Down Regulated',
-									fillStyle: '#344DB5',
+									fillStyle: DOWN_EXP_COLOR,
 									strokeStyle: '#000',
 									lineWidth: 1,
 									hidden: false,
@@ -51,7 +52,7 @@ class ExpressionChart extends React.Component {
 								},
 								{
 									text: 'Up Regulated',
-									fillStyle: '#AD3E61',
+									fillStyle: UP_EXP_COLOR,
 									strokeStyle: '#000',
 									lineWidth: 1,
 									hidden: false,
