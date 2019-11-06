@@ -1,8 +1,8 @@
 {
   "name": "@intermine/bluegenes-tissue-expression-arrayexpress-visualizer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "src/index.js",
-  "description": "",
+  "description": "Visualize gene expression by tissue using ArrayExpress data. Easily see which expressions are up- or down-regulated.",
   "homepage": "http://www.intermine.org",
   "scripts": {
     "test": "jest",
