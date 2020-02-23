@@ -3,8 +3,8 @@ const queryExpData = require('../src/queryData').default;
 
 describe('query', () => {
 	const mockData = {
-		gene: 1018204,
-		serviceUrl: 'http://www.humanmine.org/human'
+		gene: 1196911,
+		serviceUrl: 'https://www.humanmine.org/humanmine'
 	};
 	test('should return a promise that resolves with correct result json', () => {
 		const queryRes = queryExpData(mockData.gene, mockData.serviceUrl, imjs);
