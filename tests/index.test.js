@@ -10,7 +10,7 @@ describe('main', () => {
 
 	test('should render some (atleast a div) element', () => {
 		const elem = document.createElement('div');
-		main(elem, { root: null }, { value: '' }, { testing: true }, {});
+		main(elem, { root: null }, { Gene: { value: '' } }, { testing: true }, {});
 		expect(elem.innerHTML).toContain('div');
 	});
 });
