@@ -1,8 +1,6 @@
 {
-  "accepts": ["id"]  ,
-  "classes":
-    ["Gene"]
-  ,
+  "accepts": ["id"],
+  "classes": ["Gene"],
   "depends": ["AtlasExpression"],
   "columnMapping": {
     "Gene": {
@@ -19,5 +17,6 @@
   "toolName" : {
     "human" :"BlueGenes Tissue Expression Arrayexpress Visualizer",
     "cljs" :"bluegenesTissueExpressionArrayexpressVisualizer"    
-  }
+  },
+  "version": 2
 }
